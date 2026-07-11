@@ -88,12 +88,18 @@ section{padding:82px 0}
 .rule{width:60px;height:3px;background:linear-gradient(90deg,var(--gold),var(--gold-lt));margin:14px auto 0;border-radius:2px}
 
 /* Diplomado features */
-.feat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-.feat{background:#fff;border:1px solid var(--cream2);border-radius:16px;padding:26px 20px;text-align:center;transition:.25s}
-.feat:hover{transform:translateY(-4px);box-shadow:0 16px 34px rgba(81,19,30,.1);border-color:rgba(201,162,75,.5)}
-.feat .ic{width:52px;height:52px;margin:0 auto 14px;border-radius:14px;display:flex;align-items:center;justify-content:center;background:linear-gradient(160deg,#fbf4e6,#f0e2c6);font-size:1.5rem;border:1px solid rgba(201,162,75,.4)}
-.feat .n{font-family:'Cormorant Garamond';font-size:2.1rem;font-weight:700;color:var(--wine)}
-.feat .l{font-size:.9rem;color:var(--muted);font-weight:600}
+.feat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.feat{position:relative;background:linear-gradient(180deg,#fff,var(--cream));border:1px solid rgba(201,162,75,.34);border-radius:14px;padding:28px 24px 26px;text-align:left;overflow:hidden;transition:.28s cubic-bezier(.2,.7,.3,1)}
+.feat:before{content:"";position:absolute;top:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,var(--gold),var(--gold-lt));transform:scaleX(0);transform-origin:left;transition:.4s}
+.feat:hover{transform:translateY(-6px);box-shadow:0 22px 44px rgba(81,19,30,.15);border-color:var(--gold)}
+.feat:hover:before{transform:scaleX(1)}
+.feat .tag{display:block;font-family:'Manrope';font-weight:700;letter-spacing:.18em;text-transform:uppercase;font-size:.6rem;color:var(--gold);margin-bottom:10px}
+.feat .n{font-family:'Cormorant Garamond';font-size:3.1rem;font-weight:700;line-height:.92;background:linear-gradient(155deg,var(--wine3),var(--wine));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.feat .l{font-size:.9rem;color:var(--muted);font-weight:600;margin-top:8px}
+.feat.dark{background:radial-gradient(300px 200px at 85% 0,rgba(201,162,75,.18),transparent 60%),linear-gradient(158deg,var(--wine),var(--wine2));border-color:rgba(201,162,75,.5)}
+.feat.dark .n{background:linear-gradient(155deg,var(--gold-lt),var(--gold));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.feat.dark .l{color:var(--cream2)}
+.feat.dark .tag{color:var(--gold-lt)}
 
 /* Metodologia */
 .meto{background:linear-gradient(180deg,#fff,var(--cream))}
@@ -279,14 +285,14 @@ footer{background:var(--wine2);color:#d8cabb;padding:52px 0 30px;border-top:1px 
       <p>Contenido, práctica y acompañamiento pensados de principio a fin para el Examen de Idoneidad.</p>
     </div>
     <div class="feat-grid">
-      <div class="feat"><div class="ic">⏱️</div><div class="n">+160</div><div class="l">horas de formación</div></div>
-      <div class="feat"><div class="ic">🎓</div><div class="n">+40</div><div class="l">clases en vivo</div></div>
-      <div class="feat"><div class="ic">📚</div><div class="n">10</div><div class="l">módulos temáticos</div></div>
-      <div class="feat"><div class="ic">👨‍⚖️</div><div class="n">+19</div><div class="l">profesores</div></div>
-      <div class="feat"><div class="ic">📝</div><div class="n">+10</div><div class="l">simulacros</div></div>
-      <div class="feat"><div class="ic">❓</div><div class="n">+300</div><div class="l">preguntas tipo examen</div></div>
-      <div class="feat"><div class="ic">💻</div><div class="n">Zoom</div><div class="l">clases virtuales en vivo</div></div>
-      <div class="feat"><div class="ic">⚖️</div><div class="n">Kiosco</div><div class="l">Normativo incluido</div></div>
+      <div class="feat dark"><span class="tag">Formación</span><div class="n">+160</div><div class="l">horas de formación</div></div>
+      <div class="feat"><span class="tag">En vivo</span><div class="n">+40</div><div class="l">clases en vivo</div></div>
+      <div class="feat dark"><span class="tag">Temario</span><div class="n">10</div><div class="l">módulos temáticos</div></div>
+      <div class="feat"><span class="tag">Docentes</span><div class="n">+19</div><div class="l">profesores especializados</div></div>
+      <div class="feat"><span class="tag">Práctica</span><div class="n">+10</div><div class="l">simulacros estratégicos</div></div>
+      <div class="feat dark"><span class="tag">Banco</span><div class="n">+300</div><div class="l">preguntas tipo examen</div></div>
+      <div class="feat"><span class="tag">Modalidad</span><div class="n">Zoom</div><div class="l">clases virtuales en vivo</div></div>
+      <div class="feat dark"><span class="tag">Herramienta</span><div class="n">Kiosco</div><div class="l">Normativo incluido</div></div>
     </div>
   </div>
 </section>
